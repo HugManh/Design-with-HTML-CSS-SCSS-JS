@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Split Video on Page Scroll</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section>
+      <div class="side" id="side1">
+        <video
+          src="winfield_1887_erminus.mp4"
+          type="video/mp4"
+          autoplay
+          loop
+          muted
+        ></video>
+      </div>
+      <!-- /#side1.side -->
+      <div class="side" id="side2">
+        <video
+          src="winfield_1887_erminus.mp4"
+          type="video/mp4"
+          autoplay
+          loop
+          muted
+        ></video>
+      </div>
+      <!-- /#side2.side -->
+    </section>
+    <div class="content">
+      <h2>Hunt Showdown - Storm Chaser</h2>
+      <p>
+        "Few hunters brave the Bayou when hurricane winds shake the tupelo
+        trees, and the storm tide rises high on stilted, swaying shacks. Those
+        who do are fond of Storm Chaser, a Terminus Handcannon whose thunderous
+        peal rings familiarly in the cacophony of the hunt". Legendary skin for
+        the Terminus Handcannon shotgun. I was responsible for design, modeling
+        and texturing. Special thanks to Alex Asmus and the Hard Surface team
+        for the help and feedback!
+      </p>
+    </div>
+    <script>
+      let side1 = document.getElementById("side1");
+      let side2 = document.getElementById("side2");
+      window.addEventListener("scroll", function () {
+        side1.style.left = -window.pageYOffset + "px";
+        side2.style.left = window.pageYOffset + "px";
+      });
+    </script>
+  </body>
+</html>
